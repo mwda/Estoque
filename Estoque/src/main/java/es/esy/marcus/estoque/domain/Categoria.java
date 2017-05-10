@@ -20,11 +20,6 @@ public class Categoria{
 	public Categoria(){
 		
 	}
-	public Categoria(String categoria, String descricao) {
-		super();
-		this.categoria = categoria;
-		this.descricao = descricao;
-	}
 
 	public Long getId() {
 		return id;
