@@ -1,0 +1,70 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="win" title="" border="normal"
+		apply="es.esy.marcus.estoque.controller.C2categoria" >
+
+		<button id="btn" label="Aperte-me"
+			onClick="dlgCategoria.setVisible(true)" />
+
+		<listbox id="listCategoria" checkmark="true">
+			<listhead>
+				<listheader label="Código" />
+				<listheader label="Categoria" />
+				<listheader label="Descrição" />
+				<listheader label="Opções" width="20%" />
+			</listhead>
+			<template name="model">
+				<listitem id="${each.codigo}">
+					<listcell label="${each.codigo}" />
+					<listcell label="${each.categoria}" />
+					<listcell label="${each.descricao}" />
+					<listcell>
+						<button label="Excluir"
+							forward="onClick=listCategoria.onDeleteItem(${each})" />
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+
+		<window id="dlgCategoria" width="25%" border="normal"
+			mode="modal" visible="false">
+			<grid>
+				<columns>
+					<column />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<cell>
+							<label value="Categoria: *" />
+						</cell>
+						<cell>
+							<textbox id="txboxCategoria" maxlength="5" />
+						</cell>
+					</row>
+
+					<row>
+						<cell>
+							<label value="Descrição: *" />
+						</cell>
+						<cell>
+							<textbox id="txboxDescricao" rows="3"
+								cols="30" maxlength="300" />
+						</cell>
+					</row>
+					<row align="center">
+						<cell colspan="2">
+							<button id="btnSalvar" label="Salvar" />
+							<button id="btnFechar" label="Fechar" />
+						</cell>
+
+					</row>
+				</rows>
+			</grid>
+		</window>
+
+
+
+
+	</window>
+</zk>

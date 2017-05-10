@@ -2,8 +2,8 @@
 <zk>
 	<window id="win001" title="Categoria" border="normal" apply="es.esy.marcus.estoque.controller.CCategoria" >
 	<button id="btnNovaCategoria" label="Nova Categoria" />
-		<listbox id="CategoriaListbox" width="100%"
-			emptyMessage="Nenhuma Categoria Encontrada">
+		<listbox id="categoriaListbox" width="100%"
+			emptyMessage="Nenhuma Categoria Encontrada" >
 			<listhead>
 				<listheader label="Categoria" sort="auto" />
 				<listheader label="Descrição" />
@@ -11,7 +11,7 @@
 			</listhead>
 		</listbox>
 
-		<window id="dlgCategoria" width="25%" border="normal" mode="modal" visible="false">
+		<window id="dlgCategoria" width="25%" border="normal" mode="modal" visible="false" apply="es.esy.marcus.estoque.controller.CCategoria">
 			<grid>
 				<columns>
 					<column />
@@ -23,7 +23,7 @@
 							<label value="Categoria: *" />
 						</cell>
 						<cell>
-							<textbox id="txboxCategoria" constraint="no empty"/>
+							<textbox id="txboxCategoria" constraint="no empty" maxlength="5"/>
 						</cell>
 					</row>
 

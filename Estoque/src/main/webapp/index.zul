@@ -1,6 +1,0 @@
-<zk>
-	<window border="normal" width="100%">
-		<hlayout>count: <label value="@load(vm.count)" /></hlayout>
-		<button label="add" onClick="@command('cmd')"/>
-	</window>
-</zk>

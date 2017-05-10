@@ -12,8 +12,6 @@ import org.hibernate.criterion.Restrictions;
 
 import es.esy.marcus.estoque.util.HibernateUtil;
 
-
-
 public class GenericDAO<Entidade> {
 	private Class<Entidade> classe;
 
@@ -53,7 +51,7 @@ public class GenericDAO<Entidade> {
 			sessao.close();
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public List<Entidade> listar(String campoOrdenacao) {
 		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
@@ -68,8 +66,7 @@ public class GenericDAO<Entidade> {
 			sessao.close();
 		}
 	}
-	
-	
+
 	@SuppressWarnings("unchecked")
 	public Entidade buscar(Long codigo) {
 		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
@@ -84,7 +81,7 @@ public class GenericDAO<Entidade> {
 			sessao.close();
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public Entidade buscar(String patrimonio) {
 		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
@@ -99,7 +96,7 @@ public class GenericDAO<Entidade> {
 			sessao.close();
 		}
 	}
-	
+
 	public void excluir(Entidade entidade) {
 		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
 		Transaction transacao = null;

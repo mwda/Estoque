@@ -2,31 +2,20 @@ package es.esy.marcus.estoque.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
+@SuppressWarnings("serial")
 @Entity
-public class Categoria{
+public class Categoria extends GenericDomain {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
 	@Column(length = 5, nullable = false)
 	private String categoria;
 	@Column(length = 300, nullable = false)
 	private String descricao;
 	
-	public Categoria(){
-		
-	}
+	
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+	public Categoria() {
+		super();
 	}
 
 	public String getCategoria() {
