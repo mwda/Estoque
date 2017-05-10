@@ -1,0 +1,49 @@
+<?page title="Categoria" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Categoria" border="normal" apply="es.esy.marcus.estoque.controller.CCategoria">
+	<button label="Nova Categoria" onClick="dlgCategoria.setVisible(true)"/>
+		<listbox id="CategoriaListbox" width="100%"
+			emptyMessage="Nenhuma Categoria Encontrada">
+			<listhead>
+				<listheader label="Categoria" sort="auto" />
+				<listheader label="Descrição" />
+				<listheader label="Opções" width="20%" />
+			</listhead>
+		</listbox>
+
+		<window id="dlgCategoria" width="25%" border="normal" mode="modal" visible="false">
+			<grid>
+				<columns>
+					<column />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<cell>
+							<label value="Categoria: *" />
+						</cell>
+						<cell>
+							<textbox id="txboxCategoria" />
+						</cell>
+					</row>
+
+					<row>
+						<cell>
+							<label value="Descrição: *" />
+						</cell>
+						<cell>
+							<textbox id="txboxDescricao" rows="3" cols="30" />
+						</cell>
+					</row>
+					<row align="center">
+						<cell colspan="2">
+							<button id="btnSalvar" label="Salvar" />
+							<button label="Fechar" onClick="dlgCategoria.setVisible(false); txboxCategoria.text=null; txboxDescricao.text=null " />
+						</cell>
+						
+					</row>
+				</rows>
+			</grid>
+		</window>
+	</window>
+</zk>
