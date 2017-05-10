@@ -1,7 +1,5 @@
 <zk>
-	<window apply="org.zkoss.bind.BindComposer"
-		viewModel="@id('vm')@init('br.com.marcus.Estoque.MyViewModel')"
-		validationMessages="@id('vmsgs')">
+	<window border="normal" width="100%">
 		<hlayout>count: <label value="@load(vm.count)" /></hlayout>
 		<button label="add" onClick="@command('cmd')"/>
 	</window>

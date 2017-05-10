@@ -1,4 +1,4 @@
-package es.esy.marcus.dao;
+package es.esy.marcus.estoque.dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;

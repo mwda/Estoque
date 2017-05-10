@@ -1,4 +1,4 @@
-package es.esy.marcus.dao;
+package es.esy.marcus.estoque.dao;
 
 import es.esy.marcus.estoque.domain.Categoria;
 
